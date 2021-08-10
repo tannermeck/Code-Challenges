@@ -12,11 +12,11 @@ test('doubles numbers', () => {
       expect(output).toEqual(["2", "5", "100"])
   })
   
-//   test('capitalize names', () => {
-//     const input = ["john", "JACOB", "jinGleHeimer", "schmidt"]
-//     const output = capitalizeNames(input);
-//     expect(output).toEqual(["John", "Jacob", "Jingleheimer", "Schmidt"])
-//   })
+  test('capitalize names', () => {
+    const input = ["john", "JACOB", "jinGleHeimer", "schmidt"]
+    const output = capitalizeNames(input);
+    expect(output).toEqual(["John", "Jacob", "Jingleheimer", "Schmidt"])
+  })
 
 test('returns a name only', () => {
     const input = [

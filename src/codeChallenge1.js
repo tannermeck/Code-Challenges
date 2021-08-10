@@ -7,13 +7,18 @@ export function stringItUp(array) {
 }
 
 export function capitalizeNames(array) {
-   
-     const lowerCase = array.map(name => name.toLowerCase())
-     const upperCase = lowerCase.map(name => name.slice(0, 1).toUpperCase())
-     const leftOver = lowerCase.map(name => name.slice(1))
-     const name = leftOver.map(name => name)
-     const capitalize = upperCase.map(character => character)
-     return capitalize+name
+    let arr = []
+   const firstLetter = array.map(name => name.slice(0,1).toUpperCase())
+   const restName = array.map(name => name.slice(1).toLowerCase())
+   const name1 = firstLetter[0].concat(restName[0])
+   arr.push(name1)
+   const name2 = firstLetter[1].concat(restName[1])
+   arr.push(name2)
+   const name3 = firstLetter[2].concat(restName[2])
+   arr.push(name3)
+   const name4 = firstLetter[3].concat(restName[4])
+   arr.push(name4)
+   return arr
     
 }
 export function namesOnly(arr) {
