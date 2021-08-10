@@ -28,3 +28,13 @@ export function makeStrings(arr){
         }
     })
 }
+export function readyToPutInTheDom(arr){
+    return arr.map(object => {
+        if (object.name){
+            return <h1>{object.name}</h1>
+        } else if (object.age){
+            return <h2>{object.age}</h2>
+        }
+    }
+    )
+}
