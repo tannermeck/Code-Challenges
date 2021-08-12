@@ -1,24 +1,24 @@
 import { doubleNumbers, stringItUp, capitalizeNames, namesOnly, makeStrings,readyToPutInTheDom } from './codeChallenge1.js';
 
-test('doubles numbers', () => {
+test.skip('doubles numbers', () => {
     const input = [2, 5, 100]; // arrange
     const output = doubleNumbers(input); // act
     expect(output).toEqual([4, 10, 200]); // assert
   });
-  
-  test('stringify numbers', () => {
+
+  test.skip('stringify numbers', () => {
       const input = [2, 5, 100];
       const output = stringItUp(input);
       expect(output).toEqual(["2", "5", "100"])
   })
   
-  test('capitalize names', () => {
+  test.skip('capitalize names', () => {
     const input = ["john", "JACOB", "jinGleHeimer", "schmidt"]
     const output = capitalizeNames(input);
     expect(output).toEqual(["John", "Jacob", "Jingleheimer", "Schmidt"])
   })
 
-test('returns a name only', () => {
+test.skip('returns a name only', () => {
     const input = [
         { name: "Angelina Jolie", age: 80 },
         { name: "Eric Jones", age: 2
@@ -36,7 +36,7 @@ test('returns a name only', () => {
         "Bob Ziroll"
     ])
 })
-test('returns a string array', () => {
+test.skip('returns a string array', () => {
     const input = [
         { name: "Angelina Jolie", age: 80 },
         { name: "Eric Jones", age: 2
@@ -54,7 +54,7 @@ test('returns a string array', () => {
         "Bob Ziroll can go to The Matrix"
     ])
 })
-test('places names as a header', () => {
+test.skip('places names as a header', () => {
     const input = [
         { name: "Angelina Jolie", age: 80 },
         { name: "Eric Jones", age: 2 },
