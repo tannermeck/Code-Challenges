@@ -13,3 +13,10 @@ export function leastToGreatest(arr) {
  export function byAge(arr) {
      return arr.sort((a, b) => a.age - b.age)
  }
+ export function reverseOrder(arr){
+     const sort = arr.sort()
+     return sort.reverse()
+ }
+ export function filterLetter(arr){
+     return arr.filter(word => word[0] === 't')
+ }

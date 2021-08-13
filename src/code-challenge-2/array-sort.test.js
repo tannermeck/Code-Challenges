@@ -1,4 +1,4 @@
-import { leastToGreatest, greatestToLeast, lengthSort, alphabetical, byAge } from './array-sort.js'
+import { filterLetter, reverseOrder, leastToGreatest, greatestToLeast, lengthSort, alphabetical, byAge } from './array-sort.js'
 
 test('sort from least to greatest', () => {
     const input = [1, 3, 5, 2, 90, 20]; // arrange
@@ -34,4 +34,18 @@ test('sort from shortest to longest', () => {
       { name: 'Unlucky Swami', age: 77 },
       { name: 'Arrogant Ambassador', age: 100 } 
   ]); // assert
+  });
+
+  //EXTERNAL CODE CHALLENGES
+  test('sort in reverse alphebetical order', () => {
+    const input = ["l", "h", "z", "b", "s"]; // arrange
+    const output = reverseOrder(input); // act
+    console.log(output)
+    expect(output).toEqual(['z', 's', 'l', 'h', 'b']); // assert
+  });
+  test('filter by pet names that start with t', () => {
+    const input = ["goldfish", "dog", "turtle", "tiger"]; // arrange
+    const output = filterLetter(input); // act
+    console.log(output)
+    expect(output).toEqual(['turtle', 'tiger']); // assert
   });
