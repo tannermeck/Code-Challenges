@@ -1,21 +1,21 @@
 import { ofAge, peopleWhoBelongToTheIlluminati, evensOnly, fiveAndGreaterOnly, fiveCharactersOrFewerOnly } from './array-filter';
 
-test('Five and greater only', () => {
+test.skip('Five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
   const output = fiveAndGreaterOnly(input); // act
   expect(output).toEqual([6, 8]); // assert
 });
-test('returns even numbers only', () => {
+test.skip('returns even numbers only', () => {
   const input = [3, 6, 8, 2]; // arrange
   const output = evensOnly(input); // act
   expect(output).toEqual([6, 8, 2]); // assert
 });
-test('returns an object with 5 characters or less', () => {
+test.skip('returns an object with 5 characters or less', () => {
   const input = ['by', 'dog', 'wolf', 'family', 'eaten', 'camping']; // arrange
   const output = fiveCharactersOrFewerOnly(input); // act
   expect(output).toEqual(['by', 'dog', 'wolf', 'eaten']); // assert
 });
-test('returns people who belong to the illumanati only', () => {
+test.skip('returns people who belong to the illumanati only', () => {
   const input = [
     { name: 'Angelina Jolie', member: true },
     { name: 'Eric Jones', member: false },
@@ -30,7 +30,7 @@ expect(output).toEqual([
   { name: 'Bob Ziroll', member: true } 
 ])
 })
-test('returns an array of people who are old enough to see the matrix', () => {
+test.skip('returns an array of people who are old enough to see the matrix', () => {
   const input = [
     { name: 'Angelina Jolie', age: 80 },
     { name: 'Eric Jones', age: 2 },
