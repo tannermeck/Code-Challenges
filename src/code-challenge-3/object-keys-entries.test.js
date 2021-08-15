@@ -1,4 +1,4 @@
-import { capitalizeObjectKeys, getArrayOfKeysAndValues, getFilteredKey, sortKeys } from './object-keys-entries.js';
+import { multiplyNumberToPower, capitalizeObjectKeys, getArrayOfKeysAndValues, getFilteredKey, sortedArraysByValuesLength, sortKeys, isUpperCase } from './object-keys-entries.js';
 
 test('it capitalizes the keys', () => {
   const dataObject = { name: 'Angelina Jolie', age: 80 }; //arrange
@@ -19,4 +19,19 @@ test('get array of keys and values', () => {
   const dataObject = { name: 'Angelina Jolie', age: 80 } //arrange
   const output = getArrayOfKeysAndValues(dataObject); //act
   expect(output).toEqual([['name', 'Angelina Jolie'], ['age', 80]]); //assert
+});
+test('sort arrays by values object', () => {
+  const dataObject = { name: 'Bob', friend: 'Tom Hanks', location: 'Los Angeles' } //arrange
+  const output = sortedArraysByValuesLength(dataObject); //act
+  expect(output).toEqual([['location', 'Los Angeles'], ['friend', 'Tom Hanks'], ['name', 'Bob']]); //assert
+});
+test('multiply the number by the power', () => {
+  const dataObject = [3, 2]; //arrange
+  const output = multiplyNumberToPower(dataObject); //act
+  expect(output).toEqual(9); //assert
+});
+test('is the string uppercase', () => {
+  const dataObject = 'HELLO there'; //arrange
+  const output = isUpperCase(dataObject); //act
+  expect(output).toEqual(false); //assert
 });

@@ -15,3 +15,20 @@ export function getArrayOfKeysAndValues(obj){
     const object = Object.entries(obj)
     return object
 }
+export function sortedArraysByValuesLength(obj){
+    const entry = Object.entries(obj)
+    const sort = entry.sort((a, b) => b[1].length - a[1].length)
+    return sort
+
+}
+// CODE WARS
+export function multiplyNumberToPower(array){
+    const num = array[0]
+    const power = array[1]
+    return num**power
+}
+export function isUpperCase(string){
+    if (string === string.toUpperCase()){
+        return true 
+    } return false
+}
