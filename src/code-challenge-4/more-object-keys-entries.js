@@ -1,13 +1,17 @@
 export function getHouses(array){
-    return array.map(item => item.house)
+    const house = array.map(item => {
+        return item.house
+    })
+    return house;
+    // return array.map(item => item.house)
     //Object.keys?
 }
 export function updateNumbers(object){
-   const newObj = Object.keys(object)
-   const values = Object.values(object)
-   const newArray = newObj.map(key => key, values)
-   return newArray; //FAILING
-}
+        return Object.entries(object).map(item => {
+            return item.join(': ')
+        })
+    }
+
 export function totalCharacters(arr){
     const name = arr.map(item => item.name)
     let spouseLength = 0
@@ -26,8 +30,17 @@ export function totalCharacters(arr){
     return name.length + spouseLength + sum;
 }
 export function hasChildrenEntries(arr, character) {
-
+    for(let item of arr){
+        if (item.name === character){
+            if (item.children.length > 0)
+            return true
+        } else {
+            
+        } return false;
+    }
 }
 export function sortByChildren(arr){
-    
+    const sortChildren = arr.sort((a, b)=> a.children.length - b.children.length)
+    console.log(sortChildren)
+    return sortChildren;
 }
