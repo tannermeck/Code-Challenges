@@ -3,8 +3,6 @@ export function getHouses(array){
         return item.house
     })
     return house;
-    // return array.map(item => item.house)
-    //Object.keys?
 }
 export function updateNumbers(object){
         return Object.entries(object).map(item => {
