@@ -1,5 +1,6 @@
+import testUtils from 'react-dom/test-utils';
 import { getHouses, hasChildrenEntries, totalCharacters, updateNumbers, sortByChildren } from './more-object-keys-entries.js';
-test('it gets the names of the houses', () => {
+test.skip('it gets the names of the houses', () => {
   const characters = [
     {
       name: 'Eddard',
@@ -55,12 +56,12 @@ test('it gets the names of the houses', () => {
     'Snow'
   ]); //assert
 });
-test('converts an object of key value pairs into a string', () => {
+test.skip('converts an object of key value pairs into a string', () => {
     const dataObject = {'Grace Hopper': '222-303-5938', 'Ada Lovelace': '222-349-9842', 'Alan Turing': '222-853-5933'}; //arrange
     const output = updateNumbers(dataObject); //act
     expect(output).toEqual(['Grace Hopper: 222-303-5938','Ada Lovelace: 222-349-9842','Alan Turing: 222-853-5933']); //assert
   });
-test('takes in an array of characters and returns the total number', () => {
+test.skip('takes in an array of characters and returns the total number', () => {
     const dataObject = [
         {
           name: 'Eddard',
@@ -108,7 +109,7 @@ test('takes in an array of characters and returns the total number', () => {
     const output = totalCharacters(dataObject); //act
     expect(output).toEqual(26); //assert
   });
-test('takes in an arr of object and a target character and returns a boolean', () => {
+test.skip('takes in an arr of object and a target character and returns a boolean', () => {
     const dataObject = [
         {
           name: 'Eddard',
@@ -160,7 +161,7 @@ test('takes in an arr of object and a target character and returns a boolean', (
     expect(output).toEqual(false); //assert
     expect(trueOutput).toEqual(true); //assert
   });
-test('takes in an array and sorts by children and then by name', () => {
+test.skip('takes in an array and sorts by children and then by name', () => {
     const dataObject = [
         {
           name: 'Eddard',
