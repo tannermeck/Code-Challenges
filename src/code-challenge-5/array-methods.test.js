@@ -1,12 +1,12 @@
 import { howMuchPencil, wordsToCharList, listFoods, stepActions, removeLastCharacter } from './array-methods';
 
- test('It should return a list of shortening words', () => {
+ test.skip('It should return a list of shortening words', () => {
     expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
     expect(howMuchPencil('Welcome').length).toStrictEqual(8);
     expect(howMuchPencil('')).toStrictEqual(['']);
     expect(howMuchPencil('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
   });
- test('returns words to characters', () => {
+ test.skip('returns words to characters', () => {
     expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
     const name = 'Gregor';
     const nameLength = wordsToCharList(name);
@@ -14,7 +14,7 @@ import { howMuchPencil, wordsToCharList, listFoods, stepActions, removeLastChara
     expect(wordsToCharList('hooray')).toStrictEqual(['h', 'o', 'o', 'r', 'a', 'y']);
     expect(wordsToCharList('')).toStrictEqual([]);
   });
-  test('return item list names', () => {
+  test.skip('return item list names', () => {
     const dataObject =  {
         name: 'How to make a Gruffalo Crumble',
         ingredients: [
@@ -45,7 +45,7 @@ import { howMuchPencil, wordsToCharList, listFoods, stepActions, removeLastChara
     const output = listFoods(dataObject); //act
     expect(output).toEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']); //assert
   });
-  test('return a list of steps', () => {
+  test.skip('return a list of steps', () => {
     const dataObject =  {
         name: 'How to make a Gruffalo Crumble',
         ingredients: [
@@ -76,7 +76,7 @@ import { howMuchPencil, wordsToCharList, listFoods, stepActions, removeLastChara
     const output = stepActions(dataObject); //act
     expect(output).toEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']); //assert
   });
-  test('returns characters removed', () => {
+  test.skip('returns characters removed', () => {
     expect(removeLastCharacter('Gregor', 2)).toStrictEqual('Greg');
     expect(removeLastCharacter('hello', -1)).toStrictEqual('hello');
     expect(removeLastCharacter('wowow', -700)).toStrictEqual('wowow');
