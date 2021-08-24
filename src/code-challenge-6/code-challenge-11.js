@@ -27,13 +27,27 @@ export function totalSum(matrix){
 }
 export function grandTotal(stores){
     const arr = []
-    const values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    const newArr = values.map(num => num)
-    const store = stores.map(item => item)
-    console.log(store[0])
-    console.log(newArr)
-    const index = store[newArr]
-    const add = newArr.reduce((a, b) => a + b, 0)
-    arr.push(add)
+    stores.forEach(store => {
+        for (let i = 0; i < store.length; i++){
+            if (arr[i]){
+            arr[i] += store[i]
+            } else {
+                arr[i] = store[i]
+            }
+        }
+
+    })
     return arr
+   
+}
+export function salesData(hours, data){
+    const results = []
+    for (let i = 0; i < hours.length; i++){     
+            const obj = {
+                sales: `${data[i]} cookies`,
+                time: hours[i]
+            }
+            results.push(obj)
+    }
+    return results;
 }
