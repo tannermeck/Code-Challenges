@@ -33,3 +33,48 @@ export const isNum = (input) => {
         return false
     }
 };
+export const containsWorld = (input) => {
+    const arr = input.split(" ")
+    const filter = arr.find(item => {
+        if (item === 'world'){
+            return true
+        } else {
+            return false
+        }
+        })
+        if (filter === 'world'){
+            return true
+        } else {
+            return false
+        }
+};
+export const isCapitalized = (str) => {
+// first test passing
+    const arr = []
+    const split = str.split(" ")
+    console.log(split.map(item => item.replace(' ')))
+    const slice = split.map(item => {
+        if (item.slice(0, 1) === item.slice(0, 1).toUpperCase()){
+            arr.push(item)
+        } else {
+            return item
+        }
+    }
+    )
+    return arr
+};
+export const citiesAtoJ = (arr) =>{
+    const array = []
+    const values = ['A', 'B', 'C', 'D', 'E', 'F', 'H', 'I', 'J']
+    for (let i = 0; i < values.length; i++){
+    arr.map(item => {
+        if (item.slice(0, 1) === values[i]){
+            array.push(item)
+        } else {
+            return item;
+        }
+    }
+    )}
+    console.log(array)
+        return array
+}
