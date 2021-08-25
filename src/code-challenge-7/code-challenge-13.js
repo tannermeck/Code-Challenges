@@ -22,7 +22,12 @@ export const containsW = (str) => {
     }
 };
 export const isNum = (input) => {
-    if (typeof(input) === number){
+    if (typeof(input) === 'string'){
+        const newInput = Object.entries(input).map(item => item[1])
+        console.log(typeof(newInput[1]))
+        return newInput
+    }
+    if (typeof(input) === 'number'){
         return true
     } else {
         return false
