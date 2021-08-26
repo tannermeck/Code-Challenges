@@ -55,7 +55,7 @@ describe('Testing challenge 1', () => {
       expect(containsW('Hello World')).toStrictEqual(false);
       expect(containsW('hello everyone')).toStrictEqual(false);
     });
-    test.skip('returns true if the input contains a number', () => {
+    test('returns true if the input contains a number', () => {
         
       expect(isNum(1234567890)).toStrictEqual(true);
       expect(isNum('12345')).toStrictEqual(true);

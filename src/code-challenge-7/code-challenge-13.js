@@ -23,11 +23,12 @@ export const containsW = (str) => {
 };
 export const isNum = (input) => {
     if (typeof(input) === 'string'){
-        const newInput = Object.entries(input).map(item => item[1])
-        console.log(typeof(newInput[1]))
-        return newInput
+        const newInput = Object.entries(input).map(item => Number(item[1]))
+        const newObject = newInput.map(item => item)
+        console.log(typeof(newObject))
+        return newObject
     }
-    if (typeof(input) === 'number'){
+    if (typeof(input) === 'number' || typeof(newObject) === 'number'){
         return true
     } else {
         return false
@@ -75,6 +76,5 @@ export const citiesAtoJ = (arr) =>{
         }
     }
     )}
-    console.log(array)
         return array
 }
