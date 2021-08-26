@@ -69,7 +69,7 @@ describe('Testing challenge 1', () => {
       expect(containsWorld('Hello World')).toStrictEqual(false);
       expect(containsWorld('hello everyone')).toStrictEqual(false);
     });
-    test.skip('returns all words that have capital letters', () => {
+    test('returns all words that have capital letters', () => {
         
       expect(isCapitalized('We only want to Return the Words that begin With a capital Letter')).toStrictEqual([ 'We', 'Return', 'Words', 'With', 'Letter' ]);
       expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toStrictEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
